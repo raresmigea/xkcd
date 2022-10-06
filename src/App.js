@@ -9,8 +9,11 @@ function App() {
   const people = [];
 
   const callback = (e) => {
+    console.log('e:: ', e);
     people.push(e);
   };
+
+  console.log('people: ', people);
   return (
     <div>
       <Inputs callback={callback} person={person} setPerson={setPerson} />

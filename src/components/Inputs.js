@@ -7,13 +7,14 @@ const Inputs = ({ person, setPerson, callback }) => {
     setPerson({ ...person, email: e.target.value });
   };
 
+  console.log('person: ', person);
   return (
     <div>
       <label>name:</label>
-      <input onClick={updateName}></input>
+      <input onChange={updateName}></input>
       <label>email:</label>
-      <input onClick={updateEmail}></input>
-      <button onClick={callback} />
+      <input onChange={updateEmail}></input>
+      <button onClick={callback(person)}>add person</button>
     </div>
   );
 };
