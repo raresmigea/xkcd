@@ -7,7 +7,6 @@ const Inputs = ({ person, setPerson, callback }) => {
     setPerson((person) => ({ ...person, email: e.target.value }));
   };
 
-  console.log('person: ', person);
   return (
     <div>
       <label>name:</label>

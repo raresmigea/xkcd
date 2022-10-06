@@ -9,15 +9,13 @@ function App() {
   const [people, setPeople] = useState([]);
 
   const callback = (e) => {
-    console.log('e:: ', e);
     setPeople((people) => [...people, person]);
   };
 
-  console.log('people: ', people);
   return (
     <div>
       <Inputs callback={callback} person={person} setPerson={setPerson} />
-      <List />
+      <List people={people} />
     </div>
   );
 }
