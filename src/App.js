@@ -6,11 +6,11 @@ import { useState } from 'react';
 
 function App() {
   const [person, setPerson] = useState({ name: '', email: '' });
-  const people = [];
+  const [people, setPeople] = useState([]);
 
   const callback = (e) => {
     console.log('e:: ', e);
-    people.push(e);
+    setPeople((people) => [...people, person]);
   };
 
   console.log('people: ', people);

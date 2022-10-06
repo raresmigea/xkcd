@@ -1,10 +1,10 @@
 const Inputs = ({ person, setPerson, callback }) => {
   const updateName = (e) => {
-    setPerson({ ...person, name: e.target.value });
+    setPerson((person) => ({ ...person, name: e.target.value }));
   };
 
   const updateEmail = (e) => {
-    setPerson({ ...person, email: e.target.value });
+    setPerson((person) => ({ ...person, email: e.target.value }));
   };
 
   console.log('person: ', person);
@@ -14,7 +14,7 @@ const Inputs = ({ person, setPerson, callback }) => {
       <input onChange={updateName}></input>
       <label>email:</label>
       <input onChange={updateEmail}></input>
-      <button onClick={callback(person)}>add person</button>
+      <button onClick={() => callback(person)}>add person</button>
     </div>
   );
 };
